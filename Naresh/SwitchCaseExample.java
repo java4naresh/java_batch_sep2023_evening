@@ -2,7 +2,7 @@ class SwitchCaseExample
 {
 	public static void main(String[] args) 
 	{
-		int day = 2;
+		/*int day = 2;
 		switch(day) {
 		case 1: System.out.println("Sunday"); break;
 		case 2: System.out.println("Monday"); break;
@@ -12,6 +12,17 @@ class SwitchCaseExample
 		case 6: System.out.println("Friday"); break;
 		case 7: System.out.println("Saturday"); break;
 		default: System.out.println("invalid day");
+		}*/
+
+		char ch = 'd';
+        switch(ch) {
+		case 'a': System.out.println("Apple"); break;
+		case 'b': System.out.println("Ball"); break;
+		case 'c': System.out.println("Cat"); break;
+		case 'd': System.out.println("Dog"); break;
+		case 'e': System.out.println("Elephant"); break;
+		case 'g': System.out.println("Goal"); break;
+		default : System.out.println("English");
 		}
 	}
 }
