@@ -1,4 +1,4 @@
-class PreAndPostIncrementExample1
+class PreandpostIncrementExample1
 {
 public static void main (String[] args)
 {
