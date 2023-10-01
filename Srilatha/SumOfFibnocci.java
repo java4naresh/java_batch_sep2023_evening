@@ -1,13 +1,14 @@
 class SumOfFibnocci{
 public static void main(String args[]){
-
-for(int num=1;num<=20;num++){
+int sum=0;
+for(int i=1;i<=20;i++){
 int fibnocci=1;
 
-for(int i=1;i<=num;i++){
-fibnocci=fibnocci*i;
+for(int j=1;j<=i;j++){
+fibnocci= fibnocci*j;
 }
-System.out.println(fibnocci);
+sum=fibnocci;
 }
+System.out.println("The sum of fibnocci numbers from 1 to 20 is" +sum);
 }
 }
