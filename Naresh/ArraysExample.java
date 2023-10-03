@@ -30,7 +30,7 @@ class ArraysExample
 		/*for(int i=0;i<numbers.length;i++) {
 		System.out.println(numbers[i]);
 		}*/
-		int numCheck = 60;
+		/*int numCheck = 60;
 		boolean flag = false;
         for(int i=0;i<numbers.length;i++) {
 		    if(numCheck == numbers[i]) {
@@ -39,7 +39,7 @@ class ArraysExample
 		}
 		System.out.println(Arrays.toString(numbers));
 		if(flag) System.out.println("Present");
-		else System.out.println("Not Present");
+		else System.out.println("Not Present");*/
         
 		//[95,60,55,22,33,12,100] -> min and max task
 		// doubt clarify
@@ -47,5 +47,12 @@ class ArraysExample
 		System.out.println(num);
 		num = 25;
         System.out.println(num);*/
+
+		int sumArray[] = {5,9,6,3,8,9};
+		int sum = 0;
+        for(int i=sumArray.length-1;0<=i;i--) {
+        sum = sum + sumArray[i];
+        }
+        System.out.println(sum);
 	}
 }
