@@ -16,6 +16,6 @@ public static void main(String[] args){
     System.out.println(sbi);
 }
 public String toString(){
-  return "Bank[bankname="+bankName+", address="+address+", totalMarketCap="+totalMarketCap+", employeesCount="+employeeCount+"]";
+  return "Bank[bankname="+bankName+", address="+address+", totalMarketCap="+totalMarketCap+", employeeCount="+employeeCount+"]";
 }
 }
