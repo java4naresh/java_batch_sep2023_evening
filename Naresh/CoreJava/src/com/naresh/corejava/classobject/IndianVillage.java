@@ -7,5 +7,7 @@ public class IndianVillage {
 	String villageState;
 	int villagePopulation;
 	int pincode;
+	
+	static String country;
 
 }

@@ -6,6 +6,8 @@ public class IndianHeroes {
 	int heroAge;
 	int heroTotalMovies;
     int heroIndustryHits;
+    
+    static String idustryName;
 
     // this is created by me
 	/*public IndianHeroes() {

@@ -9,6 +9,11 @@ public class Person {
 	double weight;
 	double height;
 	
+    static String living;
+    static String drink;
+    
+	
+	
     public Person() {//zero param constructor
 		System.out.println("constructor");
 	}
