@@ -26,5 +26,4 @@ public class HumanBeing {
 		System.out.println(HumanBeing.drink);//Water
 
 	}
-
 }
