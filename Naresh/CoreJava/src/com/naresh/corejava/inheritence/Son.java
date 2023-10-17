@@ -8,11 +8,16 @@ public class Son extends Father {
 	String education;
 	
 	public Son(String surName, int property, String extraSkills, String education) {
+		//super();//super class constructor
+		//super(surName, property);
+		//super(); super class constructor calling should be in the first line
 		this.surName = surName;
 		this.property = property;
 		this.extraSkills = extraSkills;
-		this.education = education;
+		this.education = education;	
 	}
+	
+	
 	
 	/*public void healthIssues() {
 		System.out.println("No health issues");
@@ -31,8 +36,9 @@ public class Son extends Father {
 	}
 	
 	public static void main(String[] args) {
-		Son naresh = new Son("Naresh", 5, "Teach", "Technical");
-		naresh.healthIssues();
+		Son naresh = new Son("Kambala", 5, "Teach", "Technical");
+		//naresh.healthIssues();
+		//naresh.familySurName();
 	}
 
 }
