@@ -12,6 +12,10 @@ public class Car {
 		this.color = color;
 	}
 	
+	public void start() {
+		System.out.println("car started");
+	}
+	
 	public void longDrive(String destination) {
 		System.out.println("welcome to "+ brand+ " "+ model + " the india's safest car");
 		System.out.println("Enjoy music system");

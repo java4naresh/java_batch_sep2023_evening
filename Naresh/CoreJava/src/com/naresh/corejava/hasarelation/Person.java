@@ -11,7 +11,9 @@ public class Person {
 	}
 	
 	public void longDrive(String destination) {
+		car.start();
 		car.longDrive(destination);
+		
 	}
 
 }
