@@ -1,8 +1,12 @@
-package com.naresh.corejava.classobject;
+package com.naresh.corejava.abstraction;
 
 public abstract class SoftwareCareer {
 	
 	String jobType;
+	
+	public SoftwareCareer() {
+		
+	}
 	
 	public void basics() {
 		if(jobType == "Technical") {
@@ -13,7 +17,7 @@ public abstract class SoftwareCareer {
 		}
 	}
 	
-	public abstract void technicalJob();
+	public abstract void technicalSkills();
 	
 
 }
