@@ -25,9 +25,19 @@ public class PrimeUser {
 	}
 	
 	public String getPassWord() {
-		return password.replaceAll("[A-Za-z0-9]+", "x");
+		//return password.replaceAll("[A-Za-z0-9]+", "x");
+		return password;
 	}
 	
 	
+	public boolean equals(PrimeUser user) {
+	        if(this == user) return true;
+	        else if(this.userName.equals(user.getUserName()) 
+	        		&& this.password.equals(user.getPassWord()))
+	        	return true;
+	        return false;
+	        
+	}
+
 
 }
