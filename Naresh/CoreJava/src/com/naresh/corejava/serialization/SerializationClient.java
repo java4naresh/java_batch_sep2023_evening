@@ -6,7 +6,8 @@ import java.io.ObjectOutputStream;
 public class SerializationClient {
 
 	public static void main(String[] args) {
-		SerializationClient.doExternalization();
+		//SerializationClient.doExternalization();
+		System.out.println(Thread.currentThread().getName());
 	}
 	
 	public static void doSerialization() {
