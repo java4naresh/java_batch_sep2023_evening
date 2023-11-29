@@ -7,7 +7,7 @@ import java.util.List;
 public class ListExamples {
 	
 	public static void main(String[] args) {
-		arrayListExample();
+		genericArraylistExample();
 	}
 	
 	public static void genericArraylistExample() {
@@ -19,8 +19,16 @@ public class ListExamples {
 		list.add(10);
 		list.add(15);
 		System.out.println(list);
-		Collections.sort(list);
+		//list.remove(3);//index
+		//list.remove((Integer)30);//removing value directly
+		//list.add(2, 5);//if we want to add value in a perticular index
+		//list.clear();//if we want to empty the list we will use clear method
+		//System.out.println(list.contains(10));//if we want to check perticular value present in list
+		//System.out.println(list.indexOf(5));
+		System.out.println(list.isEmpty());
 		System.out.println(list);
+		//Collections.sort(list);
+		//System.out.println(list);
 	}
 	
 	public static void arrayListExample() {
