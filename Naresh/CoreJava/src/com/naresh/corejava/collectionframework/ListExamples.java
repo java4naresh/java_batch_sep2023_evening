@@ -11,7 +11,31 @@ import java.util.function.UnaryOperator;
 public class ListExamples {
 	
 	public static void main(String[] args) {
-		genericLinkedList();
+		customObjects();
+	}
+	
+	public static void customObjects() {
+		Orders order1 = new Orders(1,"Mobile", 1);
+		Orders order2 = new Orders(2,"Sun glasses", 2);
+		Orders order3 = new Orders(3,"Shoes", 4);
+		Orders order4 = new Orders(4,"Chairs", 2);
+		Orders order5 = new Orders(5,"Jeans", 4);
+		List<Orders> orders = new ArrayList<>();
+		orders.add(order1);
+		orders.add(order2);
+		orders.add(order3);
+		orders.add(order4);
+		orders.add(order5);
+		orders.add(order2);
+		System.out.println(orders);
+		//orders.remove(1);
+		orders.remove(new Orders(2, "Sun glasses", 2));
+		System.out.println(orders);
+		
+		Orders order6 = new Orders(2,"T-Shirt", 2);
+		boolean result = order2.equals(new Orders(2, "Sun glasses", 2));
+		System.out.println(result);//true
+		
 	}
 	
 	public static void utilityMethods() {
