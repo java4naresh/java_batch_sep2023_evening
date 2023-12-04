@@ -5,7 +5,7 @@ import com.naresh.corejava.encapsulation.PrimeUser;
 public class ObjectExperiments {
 	
 	public static void experiment1(Object obj) {
-		System.out.println(obj);
+		System.out.println(obj.getClass());
 	}
 	
 	public static Object experiment2() {
