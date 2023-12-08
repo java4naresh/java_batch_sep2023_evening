@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class SetExamples {
 
 	public static void main(String[] args) {
-		treeSetExamples();
+		customTreeSet();
 
 	}
 	
@@ -47,6 +47,28 @@ public class SetExamples {
 		System.out.println(chars);
 	}
 	
+	
+	
+	public static void  customTreeSet() {
+		String word1 = "kohli";
+		String word2 = "Rohit";
+		System.out.println(word1.compareTo(word2));
+		Set<String> names = new TreeSet<>();
+		names.add("Rohit");
+		System.out.println(names);
+		names.add("kohli");
+		System.out.println(names);
+		
+		Set<Customer> customers = new TreeSet<>();
+		customers.add(new Customer(3, "Pavan"));
+		customers.add(new Customer(1, "Naresh"));
+		customers.add(new Customer(1, "Naresh Kambala"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(3, "Pavan"));
+		System.out.println(customers);
+	}
+	
 	public static void linkedhashSetExamples() {
 		Set<String> names = new LinkedHashSet<>();
 		names.add("Rohit");
@@ -68,20 +90,42 @@ public class SetExamples {
 		System.out.println(names);
 	}
 	
+	public static void customLinkedHashSet() {
+		Set<Customer> customers = new LinkedHashSet<>();
+		customers.add(new Customer(1, "Naresh"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(3, "Pavan"));
+		customers.add(new Customer(1, "Naresh Kambala"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(3, "Pavan"));
+		System.out.println(customers);
+	}
+	
+	public static void customHashSet() {
+		Set<Customer> customers = new HashSet<>();
+		customers.add(new Customer(1, "Naresh"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(3, "Pavan"));
+		customers.add(new Customer(1, "Naresh Kambala"));
+		customers.add(new Customer(2, "Srilatha"));
+		customers.add(new Customer(3, "Pavan"));
+		System.out.println(customers);
+	}
+	
 	public static void hashSetExamples() {
 		Set<String> names = new HashSet<>();
-		names.add("Rohit");
-		names.add("Kohli");
-		names.add("Gill");
-		names.add("Shreyas");
-		names.add("Rahul");
-		names.add("Surya");
-		names.add("Jadeja");
-		names.add("Shami");
-		names.add("Kuldeep");
-		names.add("Bumra");
-		names.add("Siraj");
-		names.add("Rohit");
+		names.add(new String("Rohit"));
+		names.add(new String("Kohli"));
+		names.add(new String("Gill"));
+		names.add(new String("Shreyas"));
+		names.add(new String("Rahul"));
+		names.add(new String("Surya"));
+		names.add(new String("Jadeja"));
+		names.add(new String("Shami"));
+		names.add(new String("Kuldeep"));
+		names.add(new String("Bumra"));
+		names.add(new String("Siraj"));
+		names.add(new String("Rohit"));
 		System.out.println(names);
 		//System.out.println("Rohit".hashCode());
 		//names.remove("Rohit");
