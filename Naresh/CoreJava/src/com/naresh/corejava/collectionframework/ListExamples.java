@@ -15,7 +15,7 @@ public class ListExamples {
 	}
 	
 	public static void customObjects() {
-		Orders order1 = new Orders(1,"Mobile", 1);
+		/*Orders order1 = new Orders(1,"Mobile", 1);
 		Orders order2 = new Orders(2,"Sun glasses", 2);
 		Orders order3 = new Orders(3,"Shoes", 4);
 		Orders order4 = new Orders(4,"Chairs", 2);
@@ -34,7 +34,20 @@ public class ListExamples {
 		
 		Orders order6 = new Orders(2,"T-Shirt", 2);
 		boolean result = order2.equals(new Orders(2, "Sun glasses", 2));
-		System.out.println(result);//true
+		System.out.println(result);//true*/
+		//Cricketer c1 = new Cricketer("Rohit", 36, 250, 15);
+		List<Cricketer> customers = new ArrayList<>();
+		customers.add(new Cricketer("Rohit", 36, 250, 15));
+		customers.add(new Cricketer("Kohli", 35, 270, 5));
+		customers.add(new Cricketer("Gill", 25, 20, 1));
+		customers.add(new Cricketer("Siraj", 28, 50, 2));
+		customers.add(new Cricketer("Rahul", 26, 52, 16));
+		System.out.println(customers);
+		//Collections.sort(customers);
+		//Collections.sort(customers, new CricketerAgeSorting());
+		//Collections.sort(customers, new NoOfMatchesSorting());
+		Collections.sort(customers, new RankBasedSorting());
+		System.out.println(customers);
 		
 	}
 	
