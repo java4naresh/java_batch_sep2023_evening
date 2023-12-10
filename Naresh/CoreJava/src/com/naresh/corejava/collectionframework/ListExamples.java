@@ -3,15 +3,37 @@ package com.naresh.corejava.collectionframework;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Vector;
 import java.util.function.UnaryOperator;
 
 public class ListExamples {
 	
 	public static void main(String[] args) {
-		customObjects();
+		listIteratorExample();
+	}
+	
+	public static void listIteratorExample() {
+		List<Integer> list = new ArrayList<>();
+		list.add(25);
+		list.add(20);
+		list.add(10);
+		list.add(30);
+		list.add(10);
+		list.add(15);
+		System.out.println(list);
+		ListIterator<Integer> listItr = list.listIterator();
+		while(listItr.hasNext()) {
+			System.out.println(listItr.next());
+		}
+		
+		while(listItr.hasPrevious()) {
+			System.out.println(listItr.previous());
+		}
+		
 	}
 	
 	public static void customObjects() {
@@ -112,6 +134,12 @@ public class ListExamples {
 		System.out.println(crickers.containsAll(extraPlayers));
 		//crickers.removeAll(extraPlayers);
 		System.out.println(crickers);
+		
+		Iterator<String> cricketerIterator = crickers.iterator();
+		while(cricketerIterator.hasNext()) {
+			String name = cricketerIterator.next();
+			System.out.println(name);
+		}
 	}
 	
 	public static void genericArraylistExample() {

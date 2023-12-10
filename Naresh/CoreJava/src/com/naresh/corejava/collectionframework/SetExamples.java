@@ -1,6 +1,7 @@
 package com.naresh.corejava.collectionframework;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -10,6 +11,29 @@ public class SetExamples {
 	public static void main(String[] args) {
 		customTreeSet();
 
+	}
+	
+	public static void iteratorExampleForSet() {
+		Set<String> names = new TreeSet<>();
+		names.add("Rohit");
+		names.add("Kohli");
+		names.add("Gill");
+		names.add("Shreyas");
+		names.add("Rahul");
+		names.add("Surya");
+		names.add("Jadeja");
+		names.add("Shami");
+		names.add("Kuldeep");
+		names.add("Bumra");
+		names.add("Siraj");
+		names.add("Rohit");
+		
+		Iterator<String> namesIterator = names.iterator();
+		while(namesIterator.hasNext()) {
+			String name = namesIterator.next();
+			System.out.println(name);
+		}
+		
 	}
 	
 	public static void treeSetExamples() {
@@ -66,7 +90,13 @@ public class SetExamples {
 		customers.add(new Customer(2, "Srilatha"));
 		customers.add(new Customer(2, "Srilatha"));
 		customers.add(new Customer(3, "Pavan"));
-		System.out.println(customers);
+		//System.out.println(customers);
+		
+		Iterator<Customer> namesIterator = customers.iterator();
+		while(namesIterator.hasNext()) {
+			Customer customer = namesIterator.next();
+			System.out.println(customer);
+		}
 	}
 	
 	public static void linkedhashSetExamples() {
