@@ -1,14 +1,79 @@
 package com.naresh.corejava.collectionframework;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class MapExamples {
 
 	public static void main(String[] args) {
-		linkedHashMapExample();
+		complicatedMap();
 
+	}
+	
+	public static void complicatedMap() {
+		Map<String, Integer> andhraPopulation = new HashMap<>();
+		andhraPopulation.put("Male", 40000000);
+		andhraPopulation.put("Female", 41000000);
+		Map<String, Integer> telanganaPopulation = new HashMap<>();
+		telanganaPopulation.put("Male", 25000000);
+		telanganaPopulation.put("Female", 24000000);
+		Map<String, Integer> tamilnaduPopulation = new HashMap<>();
+		tamilnaduPopulation.put("Male", 5000000);
+		tamilnaduPopulation.put("Female", 54000000);
+		Map<String, Integer> karnatakaPopulation = new HashMap<>();
+		karnatakaPopulation.put("Male", 45000000);
+		karnatakaPopulation.put("Female", 44000000);
+		Map<String, Integer> keralaPopulation = new HashMap<>();
+		keralaPopulation.put("Male", 28000000);
+		keralaPopulation.put("Female", 31000000);
+		Map<String, Map<String, Integer>> statePopulation = new HashMap<>();
+		statePopulation.put("Andhra", andhraPopulation);
+		statePopulation.put("Telangana", telanganaPopulation);
+		statePopulation.put("Tamilnadu", tamilnaduPopulation);
+		statePopulation.put("Karnataka", karnatakaPopulation);
+		statePopulation.put("Kerala", keralaPopulation);
+		System.out.println(statePopulation);
+	}
+	
+	public static void hashtableExample() {
+		Map<String, String> stateCapitalMap = new Hashtable<>();
+		//stateCapitalMap.put("Andhra", "Amaravati");
+		stateCapitalMap.put("Hyderabad", "Telangana");
+		stateCapitalMap.put("Chennai", "Tamilnadu");
+		stateCapitalMap.put("Thiruvananthapuram", "Kerala");
+		stateCapitalMap.put("Bangalore", "Karnataka");
+		stateCapitalMap.put(null, "Andhra");
+		System.out.println(stateCapitalMap);
+		//{Chennai=Tamilnadu, Bangalore=Karnataka, Hyderabad=Telangana, Thiruvananthapuram=Kerala}
+		//{null=Andhra, Chennai=Tamilnadu, Thiruvananthapuram=Kerala, Hyderabad=Telangana, Bangalore=Karnataka}
+		
+	}
+	
+	public static void treeMapExample() {
+		Map<String, String> fruitColourMap = new TreeMap<>();
+		fruitColourMap.put("Mango", "Yellow");
+		fruitColourMap.put("Apple", "Green");
+		fruitColourMap.put("Banana", "Yellow");
+		fruitColourMap.put("Sapota", "Brown");
+		fruitColourMap.put("Guava", "Green");
+		fruitColourMap.put("Grape", "Black");
+		System.out.println(fruitColourMap);
+		//TreeMap
+		//{Apple=Green, Banana=Yellow, Grape=Black, Guava=Green, Mango=Yellow, Sapota=Brown}
+		//LinkedHashMap
+		//{Mango=Yellow, Apple=Green, Banana=Yellow, Sapota=Brown, Guava=Green, Grape=Black}
+	    // HashMap
+		//{Guava=Green, Apple=Green, Grape=Black, Sapota=Brown, Mango=Yellow, Banana=Yellow}
+		
+		System.out.println(fruitColourMap.values());
+		
+		System.out.println(fruitColourMap.keySet().contains("Orange"));
+		
+		System.out.println(fruitColourMap.values().contains("Red"));
+	
 	}
 	
 	public static void linkedHashMapExample() {
