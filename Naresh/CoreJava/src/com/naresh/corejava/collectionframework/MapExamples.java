@@ -2,15 +2,66 @@ package com.naresh.corejava.collectionframework;
 
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MapExamples {
 
 	public static void main(String[] args) {
-		complicatedMap();
+		mapIteration();
 
+	}
+	
+	public static void mapIteration() {
+		Map<Integer, String> battingOrder = new ConcurrentHashMap<>();
+		battingOrder.put(1, "Rohit");
+		battingOrder.put(1, "Ishan");
+		battingOrder.put(2, "Gill");
+		battingOrder.put(3, "Kohli");
+		battingOrder.put(4, "Shreyas");
+		battingOrder.put(5, "Gill");
+		battingOrder.put(6, "Surya");
+		System.out.println(battingOrder);
+		//[1, 2, 3, 4, 5, 6]
+		/*battingOrder.remove(1);
+		System.out.println(battingOrder);*/
+		Set<Integer> keys = battingOrder.keySet();
+		Iterator<Integer> keyItr = keys.iterator();
+		while(keyItr.hasNext()) {
+			Integer key = keyItr.next();
+			String value = battingOrder.get(key);
+			System.out.println(key+"="+value);
+			battingOrder.put(key, value+key);
+			//battingOrder.remove(key);
+		}
+		System.out.println(battingOrder);
+		
+		
+	}
+	
+	public static void customObjectsMap() {
+		/*Map<Integer, Course> courses = new HashMap<>();
+		courses.put(101, new Course(101, "Java", 20000));
+		courses.put(102, new Course(102, "Python", 20000));
+		courses.put(103, new Course(103, "Java Script", 20000));
+		courses.put(104, new Course(104, "C", 20000));
+		courses.put(105, new Course(105, "C++", 20000));
+		courses.put(106, new Course(106, "C#", 20000));
+		System.out.println(courses);*/
+		
+		Map<Course, String> faculty = new HashMap<>();
+		faculty.put(new Course(101, "Java", 20000), "Naresh");
+		faculty.put(new Course(102, "Python", 20000), "Pavan");
+		faculty.put(new Course(103, "Java Script", 20000), "Srilatha");
+		faculty.put(new Course(104, "C", 20000), "Naresh");
+		faculty.put(new Course(106, "C#", 20000), "Shyamala");
+		faculty.put(new Course(101, "java", 20000), "Naresh");
+		faculty.put(new Course(101, "Java", 20000), "Naresh");
+		System.out.println(faculty);
 	}
 	
 	public static void complicatedMap() {
