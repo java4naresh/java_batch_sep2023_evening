@@ -1,19 +1,48 @@
 package com.naresh.corejava.collectionframework;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MapExamples {
 
 	public static void main(String[] args) {
-		mapIteration();
+		mapSortingExample();
 
+	}
+	
+	public static void mapSortingExample() {
+		Map<String, Long> marketCap = new HashMap<>();
+		marketCap.put("TCS", 1412760l);
+		marketCap.put("Infosys", 655105l);
+		marketCap.put("Reliance", 1688444l);
+		marketCap.put("Adani Enterprises", 341066l);
+		marketCap.put("Titan", 319652l);
+		marketCap.put("Bata", 21164l);
+		System.out.println(marketCap);
+		Set<String> keySet = marketCap.keySet();
+		System.out.println(keySet);
+		//Set<String> sortedKeys = new TreeSet<>(keySet);
+		//sortedKeys.addAll(keySet);
+		List<String> sortingKeys = new ArrayList<>(keySet);
+		System.out.println(sortingKeys);
+		Collections.sort(sortingKeys, new StringDescOrderComparator());
+		Map<String, Long> sortedMap = new LinkedHashMap<>();
+		for(String key:sortingKeys) {
+			sortedMap.put(key, marketCap.get(key));
+		}
+		System.out.println(sortedMap);
+		
 	}
 	
 	public static void mapIteration() {
@@ -62,6 +91,16 @@ public class MapExamples {
 		faculty.put(new Course(101, "java", 20000), "Naresh");
 		faculty.put(new Course(101, "Java", 20000), "Naresh");
 		System.out.println(faculty);
+		System.out.println(faculty.get(new Course(101, "Java", 20000)));
+		Set<Entry<Course, String>> entrySet = faculty.entrySet();
+		Iterator<Entry<Course, String>> entryItr = entrySet.iterator();
+		while(entryItr.hasNext()) {
+			Entry<Course, String> entry = entryItr.next();
+			System.out.println(entry.getKey() + "="+entry.getValue());
+		}
+		/*for(Entry<Course, String> entry : entrySet) {
+			System.out.println(entry.getKey() + "="+entry.getValue());
+		}*/
 	}
 	
 	public static void complicatedMap() {
@@ -162,6 +201,12 @@ public class MapExamples {
 		System.out.println(battingOrder.get(1));
 		System.out.println(battingOrder.get(10));
 		System.out.println(battingOrder.keySet());
+		Set<Entry<Integer, String>> entrySet = battingOrder.entrySet();
+		Iterator<Entry<Integer, String>> entryItr = entrySet.iterator();
+		while(entryItr.hasNext()) {
+			Entry<Integer, String> entry = entryItr.next();
+			System.out.println(entry.getKey()+ "="+entry.getValue());
+		}
 	}
 
 }
