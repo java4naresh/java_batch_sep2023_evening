@@ -17,7 +17,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MapExamples {
 
 	public static void main(String[] args) {
-		mapSortingExample();
+		customObjectsMap();
+		//System.out.println(1 << 30);
 
 	}
 	
