@@ -20,8 +20,17 @@ public class StudentDetailsController {
 		details.add(s5);
 		details.add(s6);
 		StudentDetailsService service = new StudentDetailsService();
-		String result = service.validateStudentDetailsAndProcess(details);
-		System.out.println(result);
+		//String result = service.validateStudentDetailsAndProcess(details);
+		//System.out.println(result);
+		
+		/*List<StudentDetails> primaryStudentDetails = service.getPrimaryStudentDetails();
+	    System.out.println(primaryStudentDetails);*/
+		
+		/*List<StudentDetails> highStudentDetails = service.getHighSchoolStudentDetails();
+	    System.out.println(highStudentDetails);*/
+		
+		List<StudentDetails> allStudentDetails = service.getAllStudentDetails();
+	    System.out.println(allStudentDetails);
 	}
 
 }
