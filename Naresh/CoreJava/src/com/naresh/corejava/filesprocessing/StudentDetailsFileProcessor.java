@@ -58,6 +58,18 @@ public class StudentDetailsFileProcessor {
 		} 
 	}
 	
+	public StudentDetails getStudentDetailsById(Integer id, Integer grade) {
+		List<StudentDetails> studentList = getStudentDetails();
+		for(StudentDetails student:studentList) {
+			if(student.getStudentId() == id && student.getGrade() == grade) {
+				return student;
+			}
+		}
+		
+		throw new RuntimeException("Student Record Not found");
+		
+	}
+	
 	public static void main(String[] args) {
 		StudentDetailsFileProcessor processor = new StudentDetailsFileProcessor();
 		List<StudentDetails> studentList = processor.getStudentDetails();

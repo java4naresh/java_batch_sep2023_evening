@@ -71,5 +71,9 @@ public class StudentDetailsService {
 		
 		return allStudentDetails;
 	}
+	
+	public StudentDetails getStudentDetailsById(Integer id, Integer grade) {
+		return processor.getStudentDetailsById(id, grade);
+	}
 
 }

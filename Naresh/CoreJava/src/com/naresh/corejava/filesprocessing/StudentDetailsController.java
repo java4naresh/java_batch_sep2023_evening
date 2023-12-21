@@ -29,8 +29,11 @@ public class StudentDetailsController {
 		/*List<StudentDetails> highStudentDetails = service.getHighSchoolStudentDetails();
 	    System.out.println(highStudentDetails);*/
 		
-		List<StudentDetails> allStudentDetails = service.getAllStudentDetails();
-	    System.out.println(allStudentDetails);
+		//List<StudentDetails> allStudentDetails = service.getAllStudentDetails();
+	    //System.out.println(allStudentDetails);
+		
+		StudentDetails student = service.getStudentDetailsById(10, 1);
+		System.out.println(student);
 	}
 
 }
